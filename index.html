@@ -270,45 +270,43 @@
         color: #9aa0a6;
       }
 
-      
+      @media (max-width: 640px) {
+        .hero-wrapper {
+        padding: 32px 20px 48px;
+        border-radius: 24px;
 
-@media (max-width: 640px) {
-  .hero-wrapper {
-    padding: 32px 20px 48px;
-    border-radius: 24px;
+        background-image:
+          linear-gradient(
+          rgba(255, 255, 255, 0.92),
+          rgba(255, 255, 255, 0.98)
+        ),
+        url("header-image.jpg");
 
-    background-image:
-      linear-gradient(
-        rgba(255, 255, 255, 0.92),
-        rgba(255, 255, 255, 0.98)
-      ),
-      url("header-image.jpg");
+        background-position: center 30%;
+      }
 
-    background-position: center 30%;
-  }
+      h1 {
+        font-size: 34px;
+        line-height: 1.15;
+      }
 
-  h1 {
-    font-size: 34px;
-    line-height: 1.15;
-  }
+      .subtitle {
+        background: rgba(255, 255, 255, 0.85);
+        padding: 14px 16px;
+        border-radius: 16px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
 
-  .subtitle {
-    background: rgba(255, 255, 255, 0.85);
-    padding: 14px 16px;
-    border-radius: 16px;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
+      .status-pill {
+        margin-bottom: 12px;
+      }
 
-  .status-pill {
-    margin-bottom: 12px;
-  }
-
-  .cta {
-    width: 100%;
-    text-align: center;
-  }
-}
+      .cta {
+        width: 100%;
+        text-align: center;
+      }
+    }
     </style>
   </head>
 
