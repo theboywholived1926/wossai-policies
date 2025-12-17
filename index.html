@@ -175,19 +175,44 @@
         margin-top: 140px;
         padding-top: 48px;
         border-top: 1px solid var(--border);
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
       }
-
-      footer a {
-        font-size: 14px;
-        color: var(--text-secondary);
+      
+      footer details {
         width: fit-content;
       }
 
-      footer a:hover {
+      footer summary {
+        font-size: 14px;
+        color: #5f6368;
+        cursor: pointer;
+        list-style: none;
+      }
+
+      footer summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .footer-links {
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .footer-links a {
+        font-size: 14px;
+        color: #5f6368;
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
         text-decoration: underline;
+      }
+
+      footer .copyright {
+        margin-top: 24px;
+        font-size: 13px;
+        color: #9aa0a6;
       }
 
       @media (max-width: 640px) {
@@ -206,11 +231,6 @@
           <img src="wossai-character.png" alt="Woss AI App Icon" />
           <span>Woss AI</span>
         </div>
-        <nav>
-          <a href="/support">Support</a>
-          <a href="/privacy">Privacy</a>
-          <a href="/terms">Terms</a>
-        </nav>
       </header>
 
       <!-- Hero -->
@@ -283,11 +303,17 @@
 
       <!-- Footer -->
       <footer>
-        <a href="/support">Support & Subscriptions</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Use</a>
-        <span style="font-size: 13px; color: #9aa0a6">
-          © 2025 Woss AI. All rights reserved.
+        <details>
+          <summary>Legal & Support</summary>
+            <div class="footer-links">
+              <a href="/privacy">Privacy Policy</a>
+              <a href="/terms">Terms of Use</a>
+              <a href="/support">Subscription & Support</a>
+            </div>
+        </details>
+
+        <span class="copyright">
+            © 2025 Woss AI. All rights reserved.
         </span>
       </footer>
     </main>
