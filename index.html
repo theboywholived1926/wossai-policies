@@ -7,7 +7,7 @@
 
     <meta
       name="description"
-      content="Woss AI is an AI-powered weight loss, nutrition tracking, and health app designed to help you build better habits through personalized plans and weekly insights."
+      content="Woss AI is a personalized weight loss and health app designed to help you build sustainable habits through daily actions and AI-powered insights."
     />
 
     <!-- Font -->
@@ -19,12 +19,12 @@
     <style>
       :root {
         --bg: #ffffff;
+        --surface: #fafafa;
         --text-primary: #0b0b0b;
-        --text-secondary: #5f6368;
-        --accent: #6b6af6;
-        --card-bg: #f8f9fb;
+        --text-secondary: #6b6f76;
+        --accent: #111111;
         --border: #e6e8eb;
-        --radius: 18px;
+        --radius: 20px;
       }
 
       * {
@@ -37,7 +37,7 @@
           Roboto, Helvetica, Arial, sans-serif;
         background: var(--bg);
         color: var(--text-primary);
-        line-height: 1.65;
+        line-height: 1.7;
       }
 
       a {
@@ -48,26 +48,26 @@
       .container {
         max-width: 1100px;
         margin: 0 auto;
-        padding: 64px 24px;
+        padding: 72px 24px;
       }
 
+      /* Header */
       header {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        margin-bottom: 72px;
+        margin-bottom: 96px;
       }
 
       .brand {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 14px;
       }
 
       .brand img {
-        width: 40px;
-        height: 40px;
-        border-radius: 10px;
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
       }
 
       .brand span {
@@ -75,75 +75,68 @@
         font-weight: 600;
       }
 
-      nav a {
-        margin-left: 24px;
-        font-size: 14px;
-        color: var(--text-secondary);
-      }
-
-      nav a:hover {
-        text-decoration: underline;
-      }
-
+      /* Hero */
       .hero {
         max-width: 720px;
       }
 
       h1 {
-        font-size: 48px;
-        line-height: 1.15;
+        font-size: 52px;
+        line-height: 1.1;
         letter-spacing: -0.03em;
-        margin: 0 0 24px;
+        margin: 0 0 28px;
       }
 
       .subtitle {
         font-size: 20px;
         color: var(--text-secondary);
-        margin-bottom: 36px;
+        margin-bottom: 40px;
       }
 
       .cta {
         display: inline-block;
         background: var(--accent);
         color: #fff;
-        padding: 14px 22px;
+        padding: 16px 28px;
         border-radius: 999px;
         font-weight: 600;
         font-size: 15px;
       }
 
       .cta-note {
-        margin-top: 12px;
+        margin-top: 14px;
         font-size: 13px;
         color: var(--text-secondary);
       }
 
       section {
-        margin-top: 120px;
+        margin-top: 140px;
       }
 
       h2 {
-        font-size: 36px;
+        font-size: 40px;
         letter-spacing: -0.02em;
-        margin-bottom: 32px;
+        margin-bottom: 40px;
       }
 
+      /* Feature grid */
       .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 24px;
+        gap: 28px;
       }
 
       .card {
-        background: var(--card-bg);
+        background: var(--surface);
         border-radius: var(--radius);
-        padding: 28px;
+        padding: 32px;
         border: 1px solid var(--border);
       }
 
       .card h3 {
-        margin: 0 0 10px;
+        margin: 0 0 12px;
         font-size: 18px;
+        font-weight: 600;
       }
 
       .card p {
@@ -152,15 +145,16 @@
         color: var(--text-secondary);
       }
 
+      /* Screenshots */
       .screenshots {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 24px;
+        gap: 28px;
       }
 
       .screenshot {
         background: #000;
-        border-radius: 28px;
+        border-radius: 30px;
         aspect-ratio: 9 / 19;
         overflow: hidden;
       }
@@ -171,53 +165,78 @@
         object-fit: cover;
       }
 
+      /* Trust block */
+      .trust {
+        background: #f6f7f8;
+        border-radius: 32px;
+        padding: 72px 32px;
+        text-align: center;
+      }
+
+      .trust h2 {
+        max-width: 720px;
+        margin: 0 auto 20px;
+      }
+
+      .trust p {
+        max-width: 640px;
+        margin: 0 auto;
+        color: var(--text-secondary);
+        font-size: 18px;
+      }
+
+      /* Footer */
       footer {
-        margin-top: 140px;
-        padding-top: 48px;
-        border-top: 1px solid var(--border);
-      }
-      
-      footer details {
-        width: fit-content;
+        margin-top: 160px;
+        padding: 72px 24px 48px;
+        background: #0b0b0b;
+        color: #ffffff;
       }
 
-      footer summary {
+      .footer-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 40px;
+      }
+
+      footer h4 {
         font-size: 14px;
-        color: #5f6368;
-        cursor: pointer;
-        list-style: none;
+        font-weight: 600;
+        margin-bottom: 14px;
+        opacity: 0.9;
       }
 
-      footer summary::-webkit-details-marker {
-        display: none;
+      footer a {
+        font-size: 14px;
+        color: #c7c9cc;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
       }
 
       .footer-links {
-        margin-top: 12px;
         display: flex;
         flex-direction: column;
         gap: 10px;
       }
 
-      .footer-links a {
-        font-size: 14px;
-        color: #5f6368;
-        text-decoration: none;
-      }
-
-      .footer-links a:hover {
-        text-decoration: underline;
-      }
-
-      footer .copyright {
-        margin-top: 24px;
+      .footer-bottom {
+        margin-top: 48px;
+        text-align: center;
         font-size: 13px;
         color: #9aa0a6;
       }
 
       @media (max-width: 640px) {
         h1 {
-          font-size: 38px;
+          font-size: 40px;
+        }
+
+        h2 {
+          font-size: 32px;
         }
       }
     </style>
@@ -236,46 +255,48 @@
       <!-- Hero -->
       <section class="hero">
         <h1>
-          The weight loss, nutrition tracking & health app built for better
-          habits
+          Sustainable weight loss starts with better daily habits
         </h1>
         <p class="subtitle">
-          Woss AI helps you stay lean and consistent with personalized daily
-          actions, weekly insights, and AI-powered guidance — wherever you are.
+          Woss AI helps you build consistency through personalized actions,
+          nutrition insights, and gentle accountability — designed for real
+          life.
         </p>
         <a class="cta" href="https://apps.apple.com">Download on iOS</a>
         <div class="cta-note">
-          7-day free trial · Cancel anytime
+          7-day free trial · $14.99/month · Cancel anytime
         </div>
       </section>
 
       <!-- Features -->
       <section>
-        <h2>Designed to support real life</h2>
+        <h2>Built for real people, not perfection</h2>
         <div class="grid">
           <div class="card">
-            <h3>Log movement effortlessly</h3>
+            <h3>Daily actions that fit your life</h3>
             <p>
-              Quickly log walks, workouts, or stretches — small actions add up.
+              Small, achievable steps designed to move you forward without
+              burnout.
             </p>
           </div>
           <div class="card">
-            <h3>Daily tasks that adapt to you</h3>
+            <h3>Photo-based nutrition tracking</h3>
             <p>
-              Personalized activities help you stay lean no matter where you
-              are.
+              Snap your meals and let Woss AI handle the details — no logging
+              fatigue.
             </p>
           </div>
           <div class="card">
-            <h3>Snap meals, track nutrition</h3>
+            <h3>Progress you can actually feel</h3>
             <p>
-              Take a photo of your meal and let Woss AI handle the details.
+              Weekly insights help you understand what’s working and why.
             </p>
           </div>
           <div class="card">
-            <h3>Weekly insights & progress</h3>
+            <h3>Support without pressure</h3>
             <p>
-              See how your habits, recovery, and lifestyle improve over time.
+              Encouraging guidance that adapts to your energy, schedule, and
+              goals.
             </p>
           </div>
         </div>
@@ -285,37 +306,63 @@
       <section>
         <h2>Inside the app</h2>
         <div class="screenshots">
-          <!-- Replace src paths with your actual screenshot files -->
           <div class="screenshot">
-            <img src="woss-ai-previews/movementlog-preview-v4.png" alt="Log movement screen" />
+            <img src="woss-ai-previews/movementlog-preview-v4.png" alt="Movement tracking" />
           </div>
           <div class="screenshot">
-            <img src="woss-ai-previews/tasks-preview-v4.png" alt="Daily tasks screen" />
+            <img src="woss-ai-previews/tasks-preview-v4.png" alt="Daily tasks" />
           </div>
           <div class="screenshot">
-            <img src="woss-ai-previews/mealsnap-preview-v4.png" alt="Food photo logging" />
+            <img src="woss-ai-previews/mealsnap-preview-v4.png" alt="Meal photo logging" />
           </div>
           <div class="screenshot">
-            <img src="woss-ai-previews/weeklyinsights-preview-v2.png" alt="Weekly progress insights" />
+            <img src="woss-ai-previews/weeklyinsights-preview-v2.png" alt="Weekly insights" />
           </div>
         </div>
       </section>
 
-      <!-- Footer -->
-      <footer>
-        <details>
-          <summary>Legal & Support</summary>
-            <div class="footer-links">
-              <a href="/privacy">Privacy Policy</a>
-              <a href="/terms">Terms of Use</a>
-              <a href="/support">Subscription & Support</a>
-            </div>
-        </details>
-
-        <span class="copyright">
-            © 2025 Woss AI. All rights reserved.
-        </span>
-      </footer>
+      <!-- Trust -->
+      <section class="trust">
+        <h2>
+          A calmer, smarter way to improve your health
+        </h2>
+        <p>
+          Woss AI focuses on sustainable change — helping you feel better,
+          stronger, and more confident over time.
+        </p>
+      </section>
     </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <h4>Support</h4>
+          <div class="footer-links">
+            <a href="/support">Help & Subscriptions</a>
+            <a href="/support#billing">Billing</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Legal</h4>
+          <div class="footer-links">
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Product</h4>
+          <div class="footer-links">
+            <a href="https://apps.apple.com">Download on iOS</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2025 Woss AI. All rights reserved.
+      </div>
+    </footer>
   </body>
 </html>
