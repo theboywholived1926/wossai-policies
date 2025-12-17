@@ -55,7 +55,7 @@
       header {
         display: flex;
         align-items: center;
-        margin-bottom: 96px;
+        margin-bottom: 80px;
       }
 
       .brand {
@@ -77,7 +77,25 @@
 
       /* Hero */
       .hero {
-        max-width: 720px;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 64px;
+        align-items: center;
+      }
+
+      .hero-text {
+        max-width: 560px;
+      }
+
+      .status-pill {
+        display: inline-block;
+        background: #f1f2f4;
+        color: #5f6368;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 6px 12px;
+        border-radius: 999px;
+        margin-bottom: 18px;
       }
 
       h1 {
@@ -107,6 +125,17 @@
         margin-top: 14px;
         font-size: 13px;
         color: var(--text-secondary);
+      }
+
+      .hero-image {
+        position: relative;
+      }
+
+      .hero-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 32px;
+        object-fit: cover;
       }
 
       section {
@@ -230,7 +259,12 @@
         color: #9aa0a6;
       }
 
-      @media (max-width: 640px) {
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+          gap: 48px;
+        }
+
         h1 {
           font-size: 40px;
         }
@@ -247,24 +281,34 @@
       <!-- Header -->
       <header>
         <div class="brand">
-          <img src="wossai-character.png" alt="Woss AI App Icon" />
+          <img src="wossai-icon.png" alt="Woss AI App Icon" />
           <span>Woss AI</span>
         </div>
       </header>
 
       <!-- Hero -->
       <section class="hero">
-        <h1>
-          Sustainable weight loss starts with better daily habits
-        </h1>
-        <p class="subtitle">
-          Woss AI helps you build consistency through personalized actions,
-          nutrition insights, and gentle accountability — designed for real
-          life.
-        </p>
-        <a class="cta" href="https://apps.apple.com">Download on iOS</a>
-        <div class="cta-note">
-          7-day free trial · $14.99/month · Cancel anytime
+        <div class="hero-text">
+          <div class="status-pill">Coming soon</div>
+          <h1>
+            Sustainable weight loss starts with better daily habits
+          </h1>
+          <p class="subtitle">
+            Woss AI helps you build consistency through personalized actions,
+            nutrition insights, and gentle accountability — designed for real
+            life.
+          </p>
+          <a class="cta" href="https://apps.apple.com">Download on iOS</a>
+          <div class="cta-note">
+            7-day free trial · $14.99/month · Cancel anytime
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="header-image.png"
+            alt="Healthy, happy woman enjoying fresh food in a bright kitchen"
+          />
         </div>
       </section>
 
