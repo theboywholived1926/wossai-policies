@@ -271,18 +271,36 @@
       }
 
       @media (max-width: 640px) {
-        .hero-wrapper {
-          padding: 36px 24px 56px;
-          border-radius: 24px;
-          background-position: center 20%;
+        /* Let hero go edge-to-edge */
+        .container {
+          padding: 0;
         }
 
+        /* Full-screen hero */
+        .hero-wrapper {
+          min-height: 100vh;
+          border-radius: 0;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          background-position: center;
+          padding: 32px 24px 48px;
+        }
+
+        /* Typography scaling */
         h1 {
-          font-size: 40px;
+          font-size: 38px;
         }
 
         h2 {
           font-size: 32px;
+        }
+
+        /* Keep hero content full-width */
+        .hero {
+          max-width: 100%;
         }
       }
     </style>
