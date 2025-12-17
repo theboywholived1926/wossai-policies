@@ -269,40 +269,37 @@
         font-size: 13px;
         color: #9aa0a6;
       }
-
       @media (max-width: 640px) {
-        /* Let hero go edge-to-edge */
-        .container {
-          padding: 0;
-        }
+  /* Hero goes edge-to-edge ONLY */
+  .hero-wrapper {
+    min-height: 100vh;
+    border-radius: 0;
 
-        /* Full-screen hero */
-        .hero-wrapper {
-          min-height: 100vh;
-          border-radius: 0;
+    /* Escape container padding */
+    margin-left: -24px;
+    margin-right: -24px;
 
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-          background-position: center;
-          padding: 32px 24px 48px;
-        }
+    background-position: center;
+    padding: 32px 24px 48px;
+  }
 
-        /* Typography scaling */
-        h1 {
-          font-size: 38px;
-        }
+  /* Typography scaling */
+  h1 {
+    font-size: 38px;
+  }
 
-        h2 {
-          font-size: 32px;
-        }
+  h2 {
+    font-size: 32px;
+  }
 
-        /* Keep hero content full-width */
-        .hero {
-          max-width: 100%;
-        }
-      }
+  .hero {
+    max-width: 100%;
+  }
+}
     </style>
   </head>
 
